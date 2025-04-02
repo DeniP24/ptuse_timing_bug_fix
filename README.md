@@ -10,5 +10,6 @@ Scripts to fix wrong coordinates of PTUSE data by replacing them with the FBFUSE
 3. Run ptuse_update.py locally to read each of the lines from incorrect_coords.csv and convert the date times to unix times. This saves the output to unix_times.csv which has columns: Jname, Date, UTC_start, UTC_end, UNIX time start, UNIX time end, Verified UTC start, and Verified UTC end.
 4. Now run get_fbfuse_coordinates.sh. This runs get_coordinate_history on katportalclient in a loop until it runs successfully and the output is saved to katportalclient_output.csv.
 5. Run fbfuse_coordinates_cleanup.sh to grep the Jname,unix time, and fbfuse coordinates from katportalclient_output.csv. This saves the output to fbfuse_coordinates.csv
+6. Run final_cleanup.sh to create a single file with the /path/.sf_file replacement_ra replcaement_dec
 
 
